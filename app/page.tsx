@@ -18,7 +18,7 @@ export default function Home() {
             <Introduccion />
           </div>
 
-          <div className="w-full h-[100vh] flex justify-center items-center xl:h-[85vh]  lg:w-1/2 lg:h-full">
+          <div className="w-full h-[100vh] flex justify-center items-center xl:h-[85vh] xl:flex-9/13">
             <Badge3D />
           </div>
         </div>
