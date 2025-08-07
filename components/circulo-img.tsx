@@ -1,11 +1,17 @@
 'use client'
 
-import Image from "next/image";
+import Lottie from "react-lottie-player";
 
 const CirculoImg = () => {
     return (
-        <div className="bottom-0 right-0 hidden md:inline-block md:absolute">
-            <Image src='/logo.png' width={200} height={200} alt="circulo" className="w-full h-full" />
+        <div className="bottom-0 left-0-0 hidden md:inline-block md:absolute pl-13">
+            <Lottie
+                loop
+                path="/Programming Effects.json"
+                play
+                style={{ width: 300, height: 300 }}
+                className="flex items-center justify-center"
+            />
         </div>
     );
 }

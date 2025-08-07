@@ -13,8 +13,8 @@ export default function Home() {
           <CoverParticle />
         </div>
 
-        <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left space-y-12 lg:space-y-0 lg:space-x-0 max-w-1xl w-full mx-auto pt-15 xl:pt-0">
-          <div className="w-full xl:pt-40 pl-0 lg:w-1/2 ">
+        <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left space-y-12 lg:space-y-0 lg:space-x-0 max-w-1xl w-full mx-auto pt-15 xl:pt-0 ">
+          <div className="w-full xl:pt-40 pl-0">
             <Introduccion />
           </div>
 

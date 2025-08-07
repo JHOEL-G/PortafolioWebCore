@@ -1,12 +1,18 @@
 'use client'
 
-import Image from "next/image";
 import Transition from "./transition";
+import Lottie from "react-lottie-player";
 
 const Portafolio = () => {
     return (
-        <Transition position="bottom" className="bottom-0 left-0 hidden md:inline-block md:absolute">
-            <Image src='/logo.png' width={300} height={300} className="w-full h-full" alt="avatar" />
+        <Transition position="bottom" className="bottom-0 right-0 hidden md:inline-block md:absolute">
+            <Lottie
+                loop
+                path="/development.json"
+                play
+                style={{ width: 300, height: 300 }}
+                className="flex items-center justify-center"
+            />
         </Transition>
 
     );
