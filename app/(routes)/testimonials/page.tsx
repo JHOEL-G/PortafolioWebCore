@@ -1,8 +1,8 @@
 'use client'
 
-import Portafolio from "@/components/avatar-portafolio";
 import CirculoImg from "@/components/circulo-img";
 import { CoverParticle } from "@/components/cover-particle";
+import TestimonioImg from "@/components/testionioimg";
 import TransitionPage from "@/components/transitionpage";
 import { dataTestimonials } from "@/data";
 import Image from "next/image";
@@ -16,7 +16,7 @@ const Testimonials = () => {
             <TransitionPage />
             <div className="flex flex-col justify-center  h-lvh pt-40 xl:pt-0 md:pt-0 mb-10 xl:mb-0 sm:mb-10">
                 <CirculoImg />
-                <Portafolio />
+                <TestimonioImg />
                 <h1 className="text-2xl leading-tight text-center md:text-4xl md:mb-5 pb-5">
                     LOS COMENTARIO
 
@@ -52,7 +52,6 @@ const Testimonials = () => {
                         </Swiper>
                     </div>
                 </div>
-
             </div>
         </>
     );

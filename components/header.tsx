@@ -23,6 +23,8 @@ const Header = () => {
                                         3000,
                                         'FULL STACK',
                                         3000,
+                                        'CON INTELIGENCIA ARTIFICIAL',
+                                        5000,
                                     ]}
                                     wrapper="span"
                                     speed={10}
@@ -32,7 +34,7 @@ const Header = () => {
                             </div>
 
                         </Link>
-                        <div className="flex items-center justify-center gap-9 pb-3 pt-4 xl:pt-0">
+                        <div className="flex items-center justify-center gap-9 pb-10 pt-4 xl:pt-0">
                             {socialNetworks.map(({ logo, src, id }) => (
                                 <Link key={id} href={src} target="_blank" className="transition-all duration-300 hover:text-violet-700">
                                     {logo}

@@ -1,17 +1,16 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Comic_Neue } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
-import Header from "@/components/header";
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/scrollbar'
-
+import LayoutWrapper from "./LayoutWrapper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const comicNeue = Comic_Neue({
   variable: "--font-comic-neue",
   subsets: ["latin"],
-  weight: ["400", "700"], // Tiene regular y bold
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -27,9 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${comicNeue.variable} antialiased`}>
-        {children}
-        <Navbar />
-        <Header />
+        <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
   );

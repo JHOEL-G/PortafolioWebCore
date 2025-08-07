@@ -14,6 +14,7 @@ const Introduccion = () => {
                         loop
                         path="/Web_Development.json"
                         play
+                        className='w-60'
                     />
                 </div>
 
@@ -38,20 +39,24 @@ const Introduccion = () => {
                         />
                     </h1>
 
-                    <p className="mx-auto mb-2 text-xl md:mx-0 md:mb-8 lg:text-start">
-                        Convierto ideas en <span className="text-violet-700">soluciones digitales</span> a medida que impulsan tu negocio. Construyo sitios web que no solo lucen bien, sino que también generan resultados. Mi especialidad es crear <span className="text-violet-700">experiencias digitales completas</span> y herramientas inteligentes para automatizar tus procesos y darte una <span className="text-violet-700">ventaja competitiva</span>.
+                    <p className='font-normal pb-5'>
+                        Convierto ideas en <span className='text-violet-700 font-bold'>soluciones digitales full-stack</span> que impulsan tu negocio.
+                        Desarrollo plataformas y aplicaciones que no solo se ven bien, sino que integran
+                        <span className='text-violet-700 font-bold'>inteligencia artificial</span> para automatizar procesos clave,
+                        analizar datos y darte una <span className='text-violet-700 font-bold'>ventaja competitiva real</span>.
+                        Mi objetivo es crear experiencias digitales completas que generen resultados concretos.
                     </p>
 
-                    <div className="flex items-center justify-center gap-3 md:justify-start md:gap-10">
+                    <div className="flex items-center justify-center gap-3 md:justify-start md:gap-10 pt-5 xl:pt-0">
                         {/* Botones como enlaces con estilos directos */}
                         <Link
-                            href="/proyecto"
+                            href="portfolio"
                             className="bg-darkBg text-violet-700 px-3 py-1 transition-all border-2 border-violet-700 text-md w-fit rounded-3xl hover:shadow-xl hover:shadow-violet-700"
                         >
                             Ver Proyectos
                         </Link>
                         <Link
-                            href="/contacto"
+                            href="contacto"
                             className="bg-darkBg text-red-700 px-3 py-1 transition-all border-2 border-red-700 text-md w-fit rounded-3xl hover:shadow-xl hover:shadow-red-700"
                         >
                             Contacta Conmigo
