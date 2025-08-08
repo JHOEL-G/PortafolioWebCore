@@ -42,13 +42,13 @@ export const itemsNavbar = [
     {
         id: 2,
         title: "Sobre Mí",
-        icon: <FaAddressCard size={25} color="#fff" strokeWidth={1} />, // Se usa un icono más apropiado
+        icon: <FaAddressCard size={25} color="#fff" strokeWidth={1} />,
         link: "/about-me",
     },
     {
         id: 3,
         title: "Servicios",
-        icon: <FaLaptopCode size={25} color="#fff" strokeWidth={1} />, // Icono que representa código y desarrollo
+        icon: <FaLaptopCode size={25} color="#fff" strokeWidth={1} />,
         link: "/services",
     },
     {
@@ -60,11 +60,12 @@ export const itemsNavbar = [
     {
         id: 5,
         title: "Testimonios",
-        icon: <FaBookReader size={23} color='#fff' strokeWidth={1} />, // La imagen ya debe ser blanca
+        icon: <FaBookReader size={23} color='#fff' strokeWidth={1} />,
         link: "/testimonials",
     },
-    // Nota: El Navbar original tenía dos "Home", se ha corregido.
+
 ];
+
 
 // Se ha corregido la inconsistencia de años de experiencia y se ha mejorado el lenguaje
 export const dataAboutPage = [

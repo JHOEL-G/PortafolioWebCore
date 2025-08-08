@@ -11,6 +11,7 @@ export async function POST(req: Request) {
         const emailHtml = await renderAsync(
             <EmailTemplate
                 firstName={dataForm.username}
+                lastname={dataForm.apellido}
                 message={dataForm.message}
                 email={dataForm.email}
             />
@@ -18,10 +19,10 @@ export async function POST(req: Request) {
 
         const data = await resend.emails.send({
             from: "Acme <onboarding@resend.dev>",
-            to: ["juniorgarciapro2020@gmail.com"],
-            subject: "Tarredev landing",
+            to: ["yuniorjhoelgarcia@gmail.com"],
+            subject: "Portafolio Web",
             html: emailHtml,
-            text: "Tarredev",
+            text: "Portafolio_Web",
         });
 
         return new Response(JSON.stringify(data), {

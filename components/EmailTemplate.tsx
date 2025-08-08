@@ -3,20 +3,23 @@ import * as React from 'react';
 
 interface EmailTemplateProps {
     firstName: string;
+    lastname: string
     email: string;
     message: string;
 }
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
     firstName,
+    lastname,
     email,
     message,
 }) => (
     <div style={{ fontFamily: 'sans-serif', lineHeight: '1.6', color: '#333' }}>
         <h1 style={{ color: '#0070f3' }}>Nuevo mensaje desde tu portafolio</h1>
-        <p>Hola, {firstName} te ha enviado un mensaje a través del formulario de contacto.</p>
+        <p>Hola, {firstName} {lastname} te ha enviado un mensaje a través del formulario de contacto.</p>
         <div style={{ padding: '20px', border: '1px solid #eaeaea', borderRadius: '8px', marginTop: '20px' }}>
             <p style={{ margin: '0 0 10px 0' }}><strong>Nombre:</strong> {firstName}</p>
+            <p style={{ margin: '0 0 10px 0' }}><strong>Apellido:</strong> {lastname}</p>
             <p style={{ margin: '0 0 10px 0' }}><strong>Email:</strong> {email}</p>
             <p style={{ margin: '0 0 0 0' }}><strong>Mensaje:</strong></p>
             <div style={{

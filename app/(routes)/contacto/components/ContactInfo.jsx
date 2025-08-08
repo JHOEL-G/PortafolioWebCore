@@ -13,6 +13,7 @@ import {
   Globe,
 } from "lucide-react";
 import { FaTiktok, FaFacebookF } from "react-icons/fa";
+import { Button } from "@/components/ui/button";
 
 const ContactInfo = () => {
   const contactMethods = [
@@ -115,9 +116,9 @@ const ContactInfo = () => {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 + index * 0.1 }}
+              transition={{ delay: 0 + index * 0 }}
               className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 group"
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.04 }}
             >
               <div
                 className={`p-3 rounded-xl bg-gradient-to-r ${method.color} shadow-lg`}
@@ -162,11 +163,18 @@ const ContactInfo = () => {
         <motion.a
           href="/Currículum Web - Jhoel Garcia Ladino.pdf"
           target="_blank"
-          className="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-2xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-          whileHover={{ scale: 1.05 }}
+          className="relative inline-flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold text-white overflow-hidden group"
+          style={{
+            background: "linear-gradient(90deg, #7c3aed, #2563eb)",
+          }}
+          whileHover={{
+            scale: 1.05,
+            boxShadow: "0px 0px 20px rgba(124, 58, 237, 0.6)",
+          }}
           whileTap={{ scale: 0.95 }}
         >
-          <Download className="w-5 h-5" />
+          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></span>
+          <Download className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12" />
           Descargar CV
         </motion.a>
       </motion.div>

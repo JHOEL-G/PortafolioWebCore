@@ -14,9 +14,8 @@ import {
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     nombre: "",
-
+    apellido: "",
     email: "",
-
     mensaje: "",
   });
 
@@ -31,8 +30,14 @@ const ContactForm = () => {
 
     if (!formData.nombre.trim()) {
       newErrors.nombre = "El nombre es requerido";
-    } else if (formData.nombre.trim().length < 2) {
-      newErrors.nombre = "El nombre debe tener al menos 2 caracteres";
+    } else if (formData.nombre.trim().length < 3) {
+      newErrors.nombre = "El nombre debe tener al menos 3 caracteres";
+    }
+
+    if (!formData.apellido.trim()) {
+      newErrors.apellido = "El apellido es requerido";
+    } else if (formData.apellido.trim().length < 3) {
+      newErrors.apellido = "El apellido debe tener al menos 3 caracteres";
     }
 
     if (!formData.email.trim()) {
@@ -77,7 +82,8 @@ const ContactForm = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          username: formData.nombre,
+          firstName: formData.nombre,
+          lastname: formData.apellido,
           email: formData.email,
           message: formData.mensaje,
         }),
@@ -88,7 +94,7 @@ const ContactForm = () => {
       }
 
       setSubmitStatus("success");
-      setFormData({ nombre: "", email: "", mensaje: "" });
+      setFormData({ nombre: "", apellido: "", email: "", mensaje: "" });
       setTimeout(() => setSubmitStatus(null), 5000);
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
@@ -127,45 +133,86 @@ const ContactForm = () => {
         </motion.div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-          >
-            <label className="flex block text-white font-medium mb-2 items-center gap-2">
-              <User className="w-4 h-4" />
-              Nombre Completo
-            </label>
-
+          {/* Nombre y Apellido en la misma fila */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Campo Nombre */}
             <motion.div
-              variants={inputVariants}
-              whileFocus="focus"
-              className="relative"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
             >
-              <input
-                type="text"
-                name="nombre"
-                value={formData.nombre}
-                onChange={handleChange}
-                className={`w-full px-4 py-4 bg-white/10 border-2 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-all duration-300 ${
-                  errors.nombre ? "border-red-400" : "border-white/30"
-                }`}
-                placeholder="Tu nombre completo"
-              />
+              <label className="flex block text-white font-medium mb-2 items-center gap-2">
+                <User className="w-4 h-4" />
+                Nombre
+              </label>
 
-              {errors.nombre && (
-                <motion.p
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="text-red-400 text-sm mt-1 flex items-center gap-1"
-                >
-                  <AlertCircle className="w-4 h-4" />
-
-                  {errors.nombre}
-                </motion.p>
-              )}
+              <motion.div
+                variants={inputVariants}
+                whileFocus="focus"
+                className="relative"
+              >
+                <input
+                  type="text"
+                  name="nombre"
+                  value={formData.nombre}
+                  onChange={handleChange}
+                  className={`w-full px-4 py-4 bg-white/10 border-2 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-all duration-300 ${
+                    errors.nombre ? "border-red-400" : "border-white/30"
+                  }`}
+                  placeholder="Tu nombre"
+                />
+                {errors.nombre && (
+                  <motion.p
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-red-400 text-sm mt-1 flex items-center gap-1"
+                  >
+                    <AlertCircle className="w-4 h-4" />
+                    {errors.nombre}
+                  </motion.p>
+                )}
+              </motion.div>
             </motion.div>
-          </motion.div>
+
+            {/* Campo Apellido */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.55 }}
+            >
+              <label className="flex block text-white font-medium mb-2 items-center gap-2">
+                <User className="w-4 h-4" />
+                Apellido
+              </label>
+
+              <motion.div
+                variants={inputVariants}
+                whileFocus="focus"
+                className="relative"
+              >
+                <input
+                  type="text"
+                  name="apellido"
+                  value={formData.apellido}
+                  onChange={handleChange}
+                  className={`w-full px-4 py-4 bg-white/10 border-2 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-all duration-300 ${
+                    errors.apellido ? "border-red-400" : "border-white/30"
+                  }`}
+                  placeholder="Tu apellido"
+                />
+                {errors.apellido && (
+                  <motion.p
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-red-400 text-sm mt-1 flex items-center gap-1"
+                  >
+                    <AlertCircle className="w-4 h-4" />
+                    {errors.apellido}
+                  </motion.p>
+                )}
+              </motion.div>
+            </motion.div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
