@@ -3,6 +3,7 @@ import { CoverParticle } from "@/components/cover-particle";
 import ServicesSlider from "@/components/slider-services";
 import TransitionPage from "@/components/transitionpage";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Services = () => {
     return (
@@ -19,18 +20,24 @@ const Services = () => {
                                 Servicios
                             </span>
                         </h1>
-                        <p className="mb-3 text-xl text-gray-300 text-center xl:text-left p-5">
+                        <p className="mb-3 text-xl text-gray-300 text-center xl:text-left p-3">
                             Ofrezco soluciones digitales integrales, desde la conceptualización hasta el lanzamiento. Como especialista full stack con IA, combino un desarrollo robusto con una funcionalidad inteligente para crear aplicaciones web que no solo satisfacen, sino que superan las expectativas de mis clientes.
                         </p>
-                        <div className="flex justify-center xl:justify-start pt-1 xl:pl-5">
-                            <Button className="px-5 py-5 rounded-lg bg-violet-700 hover:bg-violet-700/65">Contacta conmigo</Button>
+                        <div className="flex justify-center xl:justify-start xl:pl-5 ">
+                            <Link
+                                href="contacto"
+                                className="bg-darkBg text-violet-700 px-3 py-1 transition-all border-2 border-violet-700 text-md w-fit rounded-3xl hover:shadow-xl hover:shadow-violet-700"
+
+                            >
+                                Contacta conmigo
+                            </Link>
                         </div>
                     </div>
                     <div className="pb-15">
                         <ServicesSlider />
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     );
 };

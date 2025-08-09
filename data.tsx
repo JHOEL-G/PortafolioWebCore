@@ -1,12 +1,12 @@
 import { FaWhatsapp, FaLinkedin, FaYoutube, FaTiktok, FaHome, FaReact, FaServer, FaTools, FaLaptopCode, FaBrain, FaBookReader } from 'react-icons/fa';
-import { FaAddressCard, FaXTwitter } from 'react-icons/fa6';
-import { GoCodeSquare } from "react-icons/go";
+import { FaAddressCard } from 'react-icons/fa6';
+import { GoCodeSquare, GoMail } from "react-icons/go";
 
 // Se han corregido los enlaces con ejemplos reales y se han agregado íconos de GitHub
 export const socialNetworks = [
     {
         id: 1,
-        logo: <FaYoutube size={25} strokeWidth={1} />,
+        logo: <FaYoutube size={30} strokeWidth={1} />,
         src: "https://www.youtube.com/@tu_usuario",
     },
     {
@@ -16,17 +16,17 @@ export const socialNetworks = [
     },
     {
         id: 3,
-        logo: <FaXTwitter size={25} strokeWidth={1} />,
+        logo: <GoMail size={27} strokeWidth={1} />,
         src: "https://twitter.com/tu_usuario",
     },
     {
         id: 4,
-        logo: <FaWhatsapp size={25} strokeWidth={1} />,
+        logo: <FaWhatsapp size={27} strokeWidth={1} />,
         src: "https://wa.me/tu_numero_de_telefono", // Enlace para contactarte por WhatsApp
     },
     {
         id: 5,
-        logo: <FaTiktok size={23} strokeWidth={1} />,
+        logo: <FaTiktok size={22} strokeWidth={1} />,
         src: "https://www.tiktok.com/@tu_usuario",
     },
 ];

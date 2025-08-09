@@ -21,7 +21,6 @@ const PageContacto = () => {
             <TransitionPage />
             <CoverParticle />
             <div className="min-h-screen bg-gradient-to-br relative overflow-hidden pb-10 xl:pb-0">
-
                 <button
                     onClick={handleBackToHome}
                     className="absolute top-6 left-6 flex items-center gap-2 text-white hover:text-blue-400 hover:scale-105 transition-all duration-300 z-50" // <-- Agrega 'z-50' aquí

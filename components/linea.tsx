@@ -2,8 +2,8 @@ import { dataAboutPage } from "@/data";
 
 const Linea = () => {
     return (
-        <div className=" flex flex-col justify-center divide-y divide-slate-200 p-4">
-            <div className="w-full max-w-3xl mx-auto md:pb-40 md:pt-20">
+        <div className=" flex flex-col justify-center divide-y divide-slate-200 pt-6">
+            <div className="w-full max-w-3xl mx-auto md:pb-40 xl:pt-7 sm:pt-5">
                 <div className="-my-6">
                     {dataAboutPage.map((data) => (
                         <div className="relative py-5 pl-8 sm:pl-32 group:" key={data.id}>

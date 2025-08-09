@@ -13,7 +13,7 @@ const Header = () => {
                 <header>
                     <div className="container justify-between max-w-6xl mx-auto md:flex">
                         <Link href='/'>
-                            <div className="text-4xl font-bold text-center md:text-left">
+                            <div className="text-3xl font-bold text-center md:text-left">
                                 <h1>Ingeniero de Software</h1>
                                 <TypeAnimation
                                     sequence={[
@@ -29,12 +29,12 @@ const Header = () => {
                                     wrapper="span"
                                     speed={10}
                                     repeat={Infinity}
-                                    className="font-bold text-violet-700 block text-center"
+                                    className="font-bold text-violet-700 block text-center text-xl sm:text-4xl md:text-4xl xl:text-4xl"
                                 />
                             </div>
 
                         </Link>
-                        <div className="flex items-center justify-center gap-9 pb-10 pt-4 xl:pt-0">
+                        <div className="flex items-center justify-center gap-7 pb-10 pt-6 xl:pt-2">
                             {socialNetworks.map(({ logo, src, id }) => (
                                 <Link key={id} href={src} target="_blank" className="transition-all duration-300 hover:text-violet-700">
                                     {logo}
@@ -46,19 +46,21 @@ const Header = () => {
             </Transition>
 
             <Transition position="bottom">
-                <div className="fixed bottom-25 right-3 xl:bottom-7 xl:right-7 z-50">
+                <div className="fixed bottom-6 right-6 z-50 sm:pb-10 md:pb-10 pb-25 xl:pb-3 xl:pr-2">
                     <Link
-                        href="https://wa.me/51959779316"
+                        href="https://wa.me/951072293"
                         target="_blank"
-                        className="transition-all duration-300 rounded-full "
+                        className="group block"
                     >
-                        <Image
-                            src='/whatsapp.png'
-                            height={70}
-                            width={70}
-                            alt="image"
-                            className="filter invert sepia-50 hover:filter-none hover:hue-rotate-90 transition-all duration-300"
-                        />
+                        <div className="relative h-14 w-14 rounded-full bg-green-500 shadow-xl transition-all duration-300 ease-in-out group-hover:scale-125 group-hover:shadow-2xl">
+                            <Image
+                                src="/whatsapp.png"
+                                height={56}
+                                width={56}
+                                alt="WhatsApp"
+                                className="absolute inset-0 m-auto"
+                            />
+                        </div>
                     </Link>
                 </div>
             </Transition>

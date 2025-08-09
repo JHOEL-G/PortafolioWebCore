@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import { itemsNavbar } from "@/data";
 import Link from "next/link";
@@ -8,17 +8,21 @@ import Transition from "./transition";
 const Navbar = () => {
     const router = usePathname();
     return (
-        <Transition position="right" className="fixed z-40 flex flex-col items-center justify-center w-full mt-auto h-max bottom-10 ">
+        <Transition
+            position="right"
+            className="fixed bottom-10 z-50 mt-auto flex h-max w-full flex-col items-center justify-center"
+        >
             <nav>
-                <div className="flex items-center justify-center gap-2 px-4 py-1 rounded-full bg-transparent  backdrop-blur-sm border">
+                <div className="flex items-center justify-center gap-2 rounded-full border bg-transparent px-4 py-1 backdrop-blur-sm">
                     {itemsNavbar.map((item) => (
-                        <div
-                            key={item.id}
-                            className={`px-3 py-2 transition duration-150 rounded-full cursor-pointer hover:bg-red-800 ${router === item.link && "bg-red-800"
-                                }`}
-                        >
-                            <Link href={item.link}>{item.icon}</Link>
-                        </div>
+                        <Link key={item.id} href={item.link}>
+                            <div
+                                className={`cursor-pointer rounded-full px-3 py-2 transition duration-150 hover:bg-red-800 ${router === item.link && "bg-red-800"
+                                    }`}
+                            >
+                                {item.icon}
+                            </div>
+                        </Link>
                     ))}
                 </div>
             </nav>

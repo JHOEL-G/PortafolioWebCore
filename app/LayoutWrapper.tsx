@@ -12,7 +12,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
         <>
             {children}
             <Navbar />
-            {pathname !== "/contacto" && <Header />}
+            {pathname !== "/contacto" && pathname !== "/sobre-mi" && pathname !== '/habilidades' && <Header />}
         </>
     );
 }
