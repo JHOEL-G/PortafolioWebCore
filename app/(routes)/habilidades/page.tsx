@@ -20,7 +20,7 @@ const PageHabilidades: React.FC = () => {
   const router = useRouter();
 
   const handleBackToHome = () => {
-    router.push('/about-me');
+    router.back();
   };
 
   const skills: Skill[] = [

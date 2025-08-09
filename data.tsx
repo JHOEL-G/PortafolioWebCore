@@ -38,32 +38,36 @@ export const itemsNavbar = [
         title: "Inicio",
         icon: <FaHome size={25} color="#fff" strokeWidth={1} />,
         link: "/",
+        ariaLabel: "Ir a la página de inicio", // Agregado para accesibilidad
     },
     {
         id: 2,
         title: "Sobre Mí",
         icon: <FaAddressCard size={25} color="#fff" strokeWidth={1} />,
         link: "/about-me",
+        ariaLabel: "Ir a la página sobre mí", // Agregado para accesibilidad
     },
     {
         id: 3,
         title: "Servicios",
         icon: <FaLaptopCode size={25} color="#fff" strokeWidth={1} />,
         link: "/services",
+        ariaLabel: "Ir a la página de servicios", // Agregado para accesibilidad
     },
     {
         id: 4,
         title: "Portafolio",
         icon: <GoCodeSquare size={25} color="#fff" strokeWidth={1} />,
         link: "/portfolio",
+        ariaLabel: "Ir a la página del portafolio", // Agregado para accesibilidad
     },
     {
         id: 5,
         title: "Testimonios",
         icon: <FaBookReader size={23} color='#fff' strokeWidth={1} />,
         link: "/testimonials",
+        ariaLabel: "Ir a la página de testimonios", // Agregado para accesibilidad
     },
-
 ];
 
 

@@ -13,7 +13,7 @@ const PageContacto = () => {
     const router = useRouter();
 
     const handleBackToHome = () => {
-        router.push('/');
+        router.back();
     };
 
     return (

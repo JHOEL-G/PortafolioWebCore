@@ -15,13 +15,13 @@ const AvatarService = () => {
                     className="flex items-center justify-center"
                 />
             </Transition>
-            <Transition position="right" className="bottom-0 right-10 hidden md:inline-block absolute ">
+            <Transition position="right" className="bottom-0 right-10 hidden md:inline-block absolute">
                 <Lottie
                     loop
                     path="/custom-development.json"
                     play
                     style={{ width: 300, height: 300 }}
-                    className="flex items-center justify-center pt-15"
+                    className="flex items-center justify-center pt-20"
                 />
             </Transition>
         </>
