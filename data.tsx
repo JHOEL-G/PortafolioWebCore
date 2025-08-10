@@ -7,27 +7,27 @@ export const socialNetworks = [
     {
         id: 1,
         logo: <FaYoutube size={30} strokeWidth={1} />,
-        src: "https://www.youtube.com/@tu_usuario",
+        src: "https://www.youtube.com/channel/UC3FKLTXrPjVkx722h277UaQ",
     },
     {
         id: 2,
         logo: <FaLinkedin size={25} strokeWidth={1} />,
-        src: "https://www.linkedin.com/in/tu_perfil_linkedin", // Enlace a tu perfil de LinkedIn
+        src: "https://www.linkedin.com/in/junior-garcia-134790369/", // Enlace a tu perfil de LinkedIn
     },
     {
         id: 3,
         logo: <GoMail size={27} strokeWidth={1} />,
-        src: "https://twitter.com/tu_usuario",
+        src: "mailto:yuniorjhoelgarcia@gmail.com",
     },
     {
         id: 4,
         logo: <FaWhatsapp size={27} strokeWidth={1} />,
-        src: "https://wa.me/tu_numero_de_telefono", // Enlace para contactarte por WhatsApp
+        src: "https://wa.me/951072293", // Enlace para contactarte por WhatsApp
     },
     {
         id: 5,
         logo: <FaTiktok size={22} strokeWidth={1} />,
-        src: "https://www.tiktok.com/@tu_usuario",
+        src: "https://www.tiktok.com/@debug_code4",
     },
 ];
 

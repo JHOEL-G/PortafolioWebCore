@@ -14,8 +14,8 @@ const comicNeue = Comic_Neue({
 });
 
 export const metadata: Metadata = {
-  title: "Comic Style App",
-  description: "Un sitio con estilo cómic",
+  title: "Portafolio - Yunior Jhoel García",
+  description: "Portafolio de proyectos y habilidades de Yunior Jhoel García, desarrollador web y Inteligencia Artificial.",
 };
 
 export default function RootLayout({
